@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: Apache-2.0
+# SELinux policy for the SimpleButton HAL service
+
+type hal_simplebutton_default, domain;
+type hal_simplebutton_default_exec, exec_type, vendor_file_type, file_type;
+
+# Allow it to run
+init_daemon_domain(hal_simplebutton_default)
+hal_server_domain(hal_simplebutton_default, hal_simplebutton)
+
+# Allow it to add service to service manager
+binder_use(hal_simplebutton_default)
+add_service(hal_simplebutton_default, hal_simplebutton_service)
+
+# Allow HAL to access sysfs nodes
+allow hal_simplebutton_default simplebutton_sysfs:file { read write open getattr };

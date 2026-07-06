@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+# SELinux service contexts for SimpleButton
+
+# Framework service name in service manager
+simplebutton    u:object_r:simplebutton_service:s0
+
+# AIDL HAL service instance
+android.hardware.simplebutton.ISimpleButton/default    u:object_r:hal_simplebutton_service:s0

@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-2.0
+config SIMPLEBUTTON
+	tristate "Simple Energy simulated hardware button driver"
+	depends on MISC_DEVICES
+	help
+	  This driver simulates a physical hardware button for Android
+	  platform stack testing. It exposes sysfs nodes under
+	  /sys/class/misc/simplebutton/ and supports ioctl and poll.
+
+	  Say Y to build into the kernel, or M to build as a loadable module.

@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+# SELinux file contexts for SimpleButton components
+
+# Kernel driver sysfs path
+/sys/class/misc/simplebutton(/.*)?    u:object_r:simplebutton_sysfs:s0
+
+# HAL service binary
+/vendor/bin/hw/android\.hardware\.simplebutton-service  u:object_r:hal_simplebutton_default_exec:s0

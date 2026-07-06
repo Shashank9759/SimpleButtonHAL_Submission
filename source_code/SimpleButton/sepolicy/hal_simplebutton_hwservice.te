@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: Apache-2.0
+# HAL interface types for VINTF and servicemanager
+
+type hal_simplebutton, hal_service_type, protected_service, protected_hwservice;
+type hal_simplebutton_service, service_manager_type;

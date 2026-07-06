@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: Apache-2.0
+
+android_app {
+    name: "SimpleButtonApp",
+    srcs: ["src/main/**/*.kt"],
+    resource_dirs: ["src/main/res"],
+    manifest: "AndroidManifest.xml",
+    platform_apis: true,
+    privileged: true,
+    certificate: "platform",
+    static_libs: [
+        "androidx.appcompat_appcompat",
+    ],
+    optimize: {
+        enabled: false,
+    },
+}

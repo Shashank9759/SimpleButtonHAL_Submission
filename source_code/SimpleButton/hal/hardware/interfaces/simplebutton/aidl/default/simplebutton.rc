@@ -1,0 +1,6 @@
+service simplebutton-hal /vendor/bin/hw/android.hardware.simplebutton-service
+    class hal
+    user system
+    group system
+    capabilities SYS_NICE
+    oneshot

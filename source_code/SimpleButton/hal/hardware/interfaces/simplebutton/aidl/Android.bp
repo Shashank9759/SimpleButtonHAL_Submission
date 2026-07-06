@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: Apache-2.0
+
+aidl_interface {
+    name: "android.hardware.simplebutton",
+    vendor_available: true,
+    stability: "vintf",
+    versions: ["1"],
+    srcs: [
+        "android/hardware/simplebutton/ISimpleButton.aidl",
+    ],
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+    },
+}

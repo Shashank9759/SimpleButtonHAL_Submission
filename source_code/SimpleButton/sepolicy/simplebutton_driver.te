@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: Apache-2.0
+# SELinux policy for the simplebutton kernel driver sysfs nodes
+
+type simplebutton_sysfs, fs_type, sysfs_type;
+
+# Allow HAL service to read/write sysfs nodes
+allow hal_simplebutton_default simplebutton_sysfs:file { read write open getattr };
